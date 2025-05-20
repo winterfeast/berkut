@@ -36,4 +36,10 @@ public class ApiUser {
     @CreationTimestamp
     @Column(name = "created_at")
     private Date createdAt;
+
+    @Column(name = "telegram_token")
+    private String telegramToken;
+
+    @Column(name = "chat_id")
+    private String chatId;
 }

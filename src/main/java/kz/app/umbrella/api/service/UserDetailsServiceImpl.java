@@ -1,5 +1,6 @@
 package kz.app.umbrella.api.service;
 
+import kz.app.umbrella.api.entity.ApiRole;
 import kz.app.umbrella.api.entity.ApiUser;
 import kz.app.umbrella.api.repository.ApiUserRepository;
 import lombok.RequiredArgsConstructor;
@@ -25,7 +26,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         return new User(
                 apiUser.getEmail(),
                 apiUser.getPassword(),
-                List.of(new SimpleGrantedAuthority("ROLE_USER"))
+                List.of(new SimpleGrantedAuthority(ApiRole.USER.name()))
         );
     }
 }
