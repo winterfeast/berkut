@@ -5,11 +5,16 @@ spring:
     enabled: true
     change-log: classpath:/db/changelog/db.changelog-master.yaml
   datasource:
-    url: jdbc:postgresql://localhost:5432/jusan_test
-    username: user
-    password: pass
+    url: ${abc_datasource_url}
+    username: ${abc_datasource_username}
+    password: ${abc_datasource_password}
   jpa:
     hibernate:
       ddl-auto: none
 jwt:
-  expiration-time: 86400000
+  expiration-time: ${abc_token_expire_time}
+
+telegram:
+  bot:
+    username: ${telegram_bot_username}
+    token: ${telegram_bot_token}
