@@ -2,7 +2,7 @@ package kz.app.umbrella.api.utils;
 
 import kz.app.umbrella.api.exception.UserAlreadyExistsException;
 import kz.app.umbrella.api.exception.UserNotFoundException;
-import kz.app.umbrella.dto.ErrorResponse;
+import kz.app.umbrella.api.dto.ErrorResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;

@@ -5,7 +5,7 @@ import kz.app.umbrella.api.entity.ApiUser;
 import kz.app.umbrella.api.exception.UserAlreadyExistsException;
 import kz.app.umbrella.api.exception.UserNotFoundException;
 import kz.app.umbrella.api.repository.ApiUserRepository;
-import kz.app.umbrella.dto.AuthRequest;
+import kz.app.umbrella.api.dto.AuthRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.password.PasswordEncoder;

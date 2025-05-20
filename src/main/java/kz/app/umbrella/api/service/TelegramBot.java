@@ -1,6 +1,5 @@
-package kz.app.umbrella.bot.config;
+package kz.app.umbrella.api.service;
 
-import kz.app.umbrella.api.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -32,7 +31,7 @@ public class TelegramBot extends TelegramLongPollingBot {
 
     @Override
     public void onUpdateReceived(Update update) {
-        log.info("Update received: updateId: {}", update.getUpdateId());
+        System.out.println(update);
 
         if (update.hasMessage() && update.getMessage().hasText()) {
             String text = update.getMessage().getText().trim();

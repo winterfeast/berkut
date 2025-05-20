@@ -2,8 +2,8 @@ package kz.app.umbrella.api.controller;
 
 import kz.app.umbrella.api.service.UserService;
 import kz.app.umbrella.api.utils.JwtUtils;
-import kz.app.umbrella.dto.AuthResponse;
-import kz.app.umbrella.dto.AuthRequest;
+import kz.app.umbrella.api.dto.AuthResponse;
+import kz.app.umbrella.api.dto.AuthRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
