@@ -39,8 +39,7 @@ public class UserService {
 
     public String generateTelegramTokenForUser(String email) {
         String token = UUID.randomUUID().toString();
-        ApiUser apiUser = apiUserRepository.findByEmail(email)
-                .orElseThrow(() -> new UserNotFoundException("User with email " + email + " not found"));
+        ApiUser apiUser = getUserByEmail(email);
         apiUser.setTelegramToken(token);
         apiUserRepository.save(apiUser);
         log.info("Telegram token for user {} saved", email);
@@ -54,5 +53,10 @@ public class UserService {
                 apiUserRepository.save(user);
                 log.info("User with chatId {} bound to telegram", chatId);
             });
+    }
+
+    public ApiUser getUserByEmail(String email) {
+        return apiUserRepository.findByEmail(email)
+                .orElseThrow(() -> new UserNotFoundException("User with email " + email + " not found"));
     }
 }
