@@ -5,9 +5,11 @@ spring:
     enabled: true
     change-log: classpath:/db/changelog/db.changelog-master.yaml
   datasource:
-    url:
-    username:
-    password:
+    url: jdbc:postgresql://localhost:5432/jusan_test
+    username: user
+    password: pass
   jpa:
     hibernate:
       ddl-auto: none
+jwt:
+  expiration-time: 86400000

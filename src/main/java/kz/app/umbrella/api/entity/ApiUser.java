@@ -2,6 +2,8 @@ package kz.app.umbrella.api.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -11,7 +13,6 @@ import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.util.Date;
-import java.util.List;
 
 @Getter
 @Setter
@@ -29,7 +30,8 @@ public class ApiUser {
     private String password;
 
     @Column(name = "role")
-    private String roles;
+    @Enumerated(EnumType.STRING)
+    private ApiRole role;
 
     @CreationTimestamp
     @Column(name = "created_at")
